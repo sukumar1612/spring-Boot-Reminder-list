@@ -56,6 +56,4 @@ public class UserNameAndPassword {
         }
         return true;
     }
-
-    
 }
