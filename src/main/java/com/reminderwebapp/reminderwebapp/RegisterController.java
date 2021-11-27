@@ -1,6 +1,7 @@
 package com.reminderwebapp.reminderwebapp;
 
 import com.reminderwebapp.reminderwebapp.allsql.Unap;
+import com.reminderwebapp.reminderwebapp.entityclasses.UserNameAndPassword;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

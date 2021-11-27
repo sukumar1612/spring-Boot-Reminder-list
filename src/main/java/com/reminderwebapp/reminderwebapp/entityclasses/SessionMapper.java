@@ -1,4 +1,4 @@
-package com.reminderwebapp.reminderwebapp;
+package com.reminderwebapp.reminderwebapp.entityclasses;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

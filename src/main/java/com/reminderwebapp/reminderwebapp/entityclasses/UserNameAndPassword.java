@@ -1,4 +1,4 @@
-package com.reminderwebapp.reminderwebapp;
+package com.reminderwebapp.reminderwebapp.entityclasses;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -55,5 +55,10 @@ public class UserNameAndPassword {
             return false;
         }
         return true;
+    }
+    public static String returnUsername(String SessionId, SessionStore store)
+    {
+        SessionMapper newSes=store.findById(SessionId).orElse(null);
+        return newSes.getUsername();
     }
 }

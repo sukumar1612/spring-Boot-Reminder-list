@@ -4,7 +4,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.reminderwebapp.reminderwebapp.allsql.SessionStore;
+import com.reminderwebapp.reminderwebapp.allsql.ToDoStore;
 import com.reminderwebapp.reminderwebapp.allsql.Unap;
+import com.reminderwebapp.reminderwebapp.entityclasses.SessionMapper;
+import com.reminderwebapp.reminderwebapp.entityclasses.ToDoItem;
+import com.reminderwebapp.reminderwebapp.entityclasses.UserNameAndPassword;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,34 +24,31 @@ public class LoginLogoutController {
     Unap un; // unap = UserNameAndPassword
     @Autowired
     SessionStore store; // session store
-
+    @Autowired
+    ToDoStore todo;
+    
     @RequestMapping("/")
     public String displayWebPage() {
         return "login_n.jsp";
     }
 
-    @RequestMapping("/home")
-    public String home(HttpServletRequest req) {
-        HttpSession session = req.getSession();
-        // remove later
-        System.out.println(session.getAttribute("UserName"));
-        System.out.println("Logged in :"+UserNameAndPassword.checkLogin(session.getId(), store));
-        //
-        return "front.jsp";
-    }
-
     @RequestMapping("/loginUser")
     public String login(UserNameAndPassword us, HttpSession session) {
         SessionMapper newses = new SessionMapper();
+        
+        session.setAttribute("SessionId", session.getId());
         newses.setSessionId(session.getId());
         newses.setUsername(us.getUsername());
-        store.save(newses);
-        // remove later
-        session.setAttribute("UserName", session.getId());
+
         System.out.println(session.getId());
-        //
-        System.out.println("Valid user : "+UserNameAndPassword.authenticate(us, un));
-        return "redirect:/home";
+        
+
+        if(UserNameAndPassword.authenticate(us, this.un))
+        {
+            store.save(newses);
+            return "redirect:/home";
+        }
+        return "redirect:/";
     }
 
     @RequestMapping("/logout")

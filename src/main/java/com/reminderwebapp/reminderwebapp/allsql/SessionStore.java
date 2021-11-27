@@ -1,6 +1,6 @@
 package com.reminderwebapp.reminderwebapp.allsql;
 
-import com.reminderwebapp.reminderwebapp.SessionMapper;
+import com.reminderwebapp.reminderwebapp.entityclasses.SessionMapper;
 
 import org.springframework.data.repository.CrudRepository;
 

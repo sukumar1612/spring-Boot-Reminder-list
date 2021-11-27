@@ -1,23 +1,51 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="home.css">
+    <title>Input Box</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <script src="" async defer></script>
-    <p id="firsttext"> Hello </p>
-    <p>Session Id : ${UserName}</p>
+    <!---------------Main Box-->
+    <div class="container">
+        <div class="todoBlock">
+            <!-- main title holder -->
+            <div class="titleHolder">
+                <h1>To Do List</h1>
+            </div>
+            <!-- todo list -->
+            <div class="todoList">
+                <!-- list holder -->
+                <div class="listHolder" id="listHolder">
+                    <ul class="list" id="lists">
+                        <!-----------GetValue by Javascript-->
+                    </ul>
+                </div>
+                <!-- form holder -->
+                <div class="formHolder">
+                    <div class="col big">
+                        <input type="text" id="addInput" required>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="addBtn" class="btn-primary">Add Item</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="removeBtn" class="btn-primary">Hide List</button>
+                    </div>
+                    <form action="logout">
+                        <div class="col">
+                            <button type="submit" id="removeBtn" class="btn-primary">Logout</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <form action="logout">
-        <input type="submit" value="logout">
-    </form>
+    <script src="myscript.js"></script>
 </body>
 
 </html>

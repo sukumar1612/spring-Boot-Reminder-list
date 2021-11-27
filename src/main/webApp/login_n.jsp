@@ -11,13 +11,31 @@
 </head>
 
 <body>
-    <script src="" async defer></script>
+    <!-- <script src="" async defer></script>
     <form action="loginUser">
         <input type="text" name="username"><br>
         <input type="text" name="password"><br>
         <input type="submit" value="login">
     </form>
+    <form action="/register">
+        <input type="submit" value="Register">
+    </form> -->
 
+
+    <div class="login">
+        <div class="form">
+            <form class="login-form" action="loginUser">
+                <span class="material-icons">login</span>
+                <input type="text" name="username" placeholder="username" required/>
+                <input type="password" name="password" placeholder="password" required />
+                <button>login</button>
+            </form>
+            <br>
+            <form action="/register">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

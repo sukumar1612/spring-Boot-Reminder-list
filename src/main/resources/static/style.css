@@ -1,0 +1,137 @@
+.container {
+    margin: auto;
+    max-width: 600px;
+}
+
+.todoBlock {
+    padding: 30px;
+    margin-top: 50px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: -9px 17px 13px rgb(0 0 0 / 16%);
+}
+
+body {
+    background: aliceblue;
+}
+
+.todoBlock {}
+
+.titleHolder h1 {
+    text-transform: uppercase;
+    color: brown;
+    font-family: sans-serif;
+}
+
+.todoList {
+    width: 100%;
+    height: auto;
+}
+
+ul.list {}
+
+ul.list {
+    counter-increment: step-counter;
+    position: relative;
+    padding: 22px;
+}
+
+.list li {
+    list-style: circle;
+    padding: 15px;
+    font-family: system-ui;
+    font-weight: 600;
+}
+
+span.listName {}
+
+.col.big {}
+
+input#addInput {
+    padding: 8px 12px;
+    float: left;
+    outline: none;
+    border: 1px solid brown;
+}
+
+.col {}
+
+button#addBtn {
+    padding: 9px 20px;
+    margin: 0 17px;
+    float: left;
+    outline: none;
+    border: 1px solid brown;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button#removeBtn {
+    border: 1px solid brown;
+    padding: 9px 22px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button#removeBtn:hover {
+    background: #a52a2a4f;
+}
+
+button#addBtn:hover {
+    background: #a52a2a4f;
+}
+
+.listHolder {
+    height: 400px;
+    overflow: scroll;
+}
+
+.list li {
+    border-bottom: 0.5px solid #0000000d;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: brown;
+    border-radius: 30%;
+}
+
+.listIcon {
+    float: right;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.listIcon button {
+    margin: 0;
+    font-size: 13px;
+    /* cursor: pointer; */
+    pointer-events: none;
+    border: 1px solid;
+    color: #a52a2aab;
+    border-radius: 8px;
+    opacity: 37%;
+    transition: 0.2s ease-in-out;
+}
+
+.listIcon:hover button {
+    color: brown;
+    font-size: 14px;
+    opacity: 100%;
+}
+
+
+/* Js adding Css Property*/
+
+.rBox {
+    height: 0px;
+}
+
+.falling {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
